@@ -153,10 +153,6 @@ int main () {
         eq[i] = id++;
     }
 
-    /*for (auto u : eq){
-        cout << u.first+1 << " " << u.second << endl;
-    }*/
-
     vector<int> eq_classes[id-1];
     for (auto u : eq){
         eq_classes[u.second-1].push_back(u.first);
@@ -186,19 +182,6 @@ int main () {
             }
         }
     }
-
-    /*for (int i=0; i<id-1; i++){
-        for (auto u : dec_classes[i]){
-            cout << u << " ";
-        }
-        cout << endl;
-    }*/
-    
-   // printEqClasses(eq_classes, eq_table, dec_classes, id-1, num_attributes);
-
-    /*for (auto u : inv_decisions){
-        cout << u.first << " " << u.second << endl;
-    }*/
 
     findApprox(eq_classes, dec_classes, id-1, num_decisions); 
     return 0;
